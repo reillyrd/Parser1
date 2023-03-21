@@ -118,7 +118,7 @@ int main(int argc, char * argv[])
         /*cacluate start of IP header and map to struct*/
         ip = (struct ip_h *) (packet + sizeof(struct ethernet_h));
 
-        printf("\b\nIP src: \t");
+        printf("\nIP src:   \t");
         for (j=0;j<4;j++)
         {
             printf(" %u ", ip->srcAddress[j]);
@@ -132,13 +132,13 @@ int main(int argc, char * argv[])
 
         // print src and dest port number
         tcp = (struct tcp_h *) (packet + sizeof(struct ethernet_h) + sizeof(struct ip_h)); //calulate tcp header and map to struct
-        printf("source port- ");
+        printf("source port - \t\t\t");
         unsigned short src_port = *((unsigned short*)tcp->src_port);
         src_port = src_port>>8 | src_port<<8;
         printf("%u",src_port);
 
         printf("\n");
-        printf("destination port- ");
+        printf("destination port - \t\t");
         unsigned short dest_port = *((unsigned short*)tcp->dest_port);
         dest_port = dest_port>>8 | dest_port<<8;
         printf("%u",dest_port);
