@@ -14,7 +14,7 @@ MESSAGE( [Parser1] " PCAP_INCLUDE_DIR = ${PCAP_INCLUDE_DIR}")
 MESSAGE( [Parser1] " PCAP_LIBRARY = ${PCAP_LIBRARY}")
 find_package(PCAP REQUIRED)
 
-set(sources main.cpp)
+set(sources Parser1.cpp)
 
 # the executable
 add_executable(Parser1 ${sources})

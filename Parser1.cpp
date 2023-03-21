@@ -7,14 +7,14 @@
 
 /*****************************************
  *
- * packet_headers.c
+ * Parser1.c
  *
  *
  * Reads a pcap trace and prints out the packet headers, both
  * the Ethernet and TCP/IP headers
  *
  *
- * USAGE: ./packet_headers trace.pcap
+ * USAGE: ./Parser1 trace.pcap
  ****************************************/
 
 
@@ -115,7 +115,7 @@ int main(int argc, char * argv[])
         {
             printf("%02x:", ethernet->destAddress[j]);
         }
-        /*cacluate start of IP header and map to struct*/
+        /*calculate start of IP header and map to struct*/
         ip = (struct ip_h *) (packet + sizeof(struct ethernet_h));
 
         printf("\nIP src:   \t");
@@ -132,30 +132,30 @@ int main(int argc, char * argv[])
 
         // print src and dest port number
         tcp = (struct tcp_h *) (packet + sizeof(struct ethernet_h) + sizeof(struct ip_h)); //calulate tcp header and map to struct
-        printf("source port - \t\t\t");
+        printf("source port \t\t- \t");
         unsigned short src_port = *((unsigned short*)tcp->src_port);
         src_port = src_port>>8 | src_port<<8;
         printf("%u",src_port);
 
         printf("\n");
-        printf("destination port - \t\t");
+        printf("destination port \t- \t");
         unsigned short dest_port = *((unsigned short*)tcp->dest_port);
         dest_port = dest_port>>8 | dest_port<<8;
         printf("%u",dest_port);
         printf("\n");
 
 
-        //calulate tls header and map to struct. This calculation  checks for the first tls message if any. It checks only for TLSv1 (using 0x0301)
+        //calculate tls header and map to struct. This calculation  checks for the first tls message if any. It checks only for TLSv1 (using 0x0301)
         int size = header.len;
         if( size >= sizeof(struct ethernet_h) + sizeof(struct ip_h) + sizeof(struct tcp_h)+ sizeof(struct tls_h)){ 	//check if header has enough bytes for tls
             tls = (struct tls_h *) (packet + sizeof(struct ethernet_h) + sizeof(struct ip_h) + sizeof(struct tcp_h));
             unsigned char version_upper = *((unsigned char*)tls->version);
             unsigned char version_lower = *((unsigned char*)tls->version+1);
             if (version_upper == 0x03 && version_lower == 0x01){
-                printf("TLS 1.0: Yes\n");
+                printf("TLS 1.0: \t\t\t\tYes\n");
             }
             else{
-                printf("TLS 1.0: No\n");
+                printf("TLS 1.0: \t\t\t\tNo\n");
             }
             version_upper = 0;	//clearing values
             version_lower = 0;	//clearing values
