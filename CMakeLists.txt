@@ -14,7 +14,7 @@ MESSAGE( [Parser1] " PCAP_INCLUDE_DIR = ${PCAP_INCLUDE_DIR}")
 MESSAGE( [Parser1] " PCAP_LIBRARY = ${PCAP_LIBRARY}")
 find_package(PCAP REQUIRED)
 
-set(sources main.cpp)
+set(sources main.cpp packet_parser.c packet_parser.h packet.h assert.h gre.h types.h platforms.h header.h icmp.h icmpv6.h ip.h ipv6.h mpls.h tcp.h udp.h unaligned.h)
 
 # the executable
 add_executable(Parser1 ${sources})

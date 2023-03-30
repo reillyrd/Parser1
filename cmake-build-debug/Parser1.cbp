@@ -82,7 +82,55 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/assert.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/gre.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/header.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/icmp.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/icmpv6.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/ip.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/ipv6.h">
+			<Option target="Parser1"/>
+		</Unit>
 		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/main.cpp">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/mpls.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/packet.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/packet_parser.c">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/packet_parser.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/platforms.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/tcp.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/types.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/udp.h">
+			<Option target="Parser1"/>
+		</Unit>
+		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/unaligned.h">
 			<Option target="Parser1"/>
 		</Unit>
 		<Unit filename="C:/Users/reillyrd/CLionProjects/Parser1/CMakeLists.txt">

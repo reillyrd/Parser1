@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Parser1.dir\build.make CMakeFiles/Parser1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+packet_parser.obj: packet_parser.c.obj
+.PHONY : packet_parser.obj
+
+# target to build an object file
+packet_parser.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Parser1.dir\build.make CMakeFiles/Parser1.dir/packet_parser.c.obj
+.PHONY : packet_parser.c.obj
+
+packet_parser.i: packet_parser.c.i
+.PHONY : packet_parser.i
+
+# target to preprocess a source file
+packet_parser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Parser1.dir\build.make CMakeFiles/Parser1.dir/packet_parser.c.i
+.PHONY : packet_parser.c.i
+
+packet_parser.s: packet_parser.c.s
+.PHONY : packet_parser.s
+
+# target to generate assembly for a file
+packet_parser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Parser1.dir\build.make CMakeFiles/Parser1.dir/packet_parser.c.s
+.PHONY : packet_parser.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... packet_parser.obj
+	@echo ... packet_parser.i
+	@echo ... packet_parser.s
 .PHONY : help
 
 
